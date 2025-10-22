@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+  <header>
+    <h1>MiniGameZone</h1>
+    <button id="theme-toggle">🌙</button>
+  </header>
+
+  <div class="form-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+
+      <div class="captcha">
+        <input type="checkbox" id="robotCheck" required>
+        <label for="robotCheck">I’m not a robot 🤖</label>
+      </div>
+
+      <button type="submit">Login</button>
+
+      <p class="link">Don’t have an account? 
+        <a href="register.html">Register here</a>
+      </p>
+    </form>
+  </div>
+
+  <script src="../js/login.js"></script>
+</body>
+</html>

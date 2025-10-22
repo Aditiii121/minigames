@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+  <header>
+    <h1>🎮 Your Profile</h1>
+    <button id="logoutBtn">Logout</button>
+  </header>
+
+  <main>
+    <!-- User Info Section -->
+    <section class="user-info">
+      <h2>User Information</h2>
+      <p><strong>Full Name:</strong> <span id="fullname"></span></p>
+      <p><strong>Age:</strong> <span id="age"></span></p>
+      <p><strong>Email:</strong> <span id="email"></span></p>
+    </section>
+
+    <section class="stats">
+      <h2>Game Stats</h2>
+
+      <div class="stat-boxes">
+        <div class="stat-card">
+          <h3>Most Played Game</h3>
+          <p id="mostPlayed">None yet</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>Least Played Game</h3>
+          <p id="leastPlayed">None yet</p>
+        </div>
+      </div>
+
+      <div class="high-scores">
+        <h3>High Scores</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Game</th>
+              <th>High Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Flappy Bird</td><td id="score-flappy">0</td></tr>
+            <tr><td>Space Shooter</td><td id="score-space">0</td></tr>
+            <tr><td>Memory Game (fastest player)</td><td id="score-memory">0</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/profile.js"></script>
+</body>
+</html>

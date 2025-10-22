@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+/* 
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+
+} */
+
+body{
+    background-color: #2d2a3d;
+    background: linear-gradient(to bottom, #3f3b55, #201e2c );
+    color: #ffffff;
+    font-family: "Poppins";
+    background-repeat: no-repeat;
+    background-attachment: fixed;  /*imp okay slayy*/
+}
+
+.message{
+    /* margin: 5em 0 2em; */
+    margin: 2.2em 0 1.5em;
+    text-align: center;
+    font-size: 1.5em;
+    
+}
+
+.images{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    /* height: 200px; */
+    height: 15em;
+}
+
+.computer img,
+.player img {
+  width: 75%;
+}
+
+.shakeComputer{
+    animation: shakeComputer 0.8s linear;
+}
+
+.shakePlayer{
+    animation: shakePlayer 0.8s linear;
+}
+
+
+
+.points{
+    text-align: center;
+    margin: 2em 0;
+    font-size: 1.3em;
+}
+
+.computerPoints{
+    margin-left: 3vmin;
+}
+
+.playerPoints{
+    margin-right: 3vmin;
+}
+
+.options{
+    /* margin-top: 3vmin; */
+    margin-top: 3.5em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+
+}
+
+.options button{
+    background: none;
+    color: #ffffff;
+    padding: 1em 2em;
+    /* width : 17vmin; */
+    border : 1px solid white;
+    border-radius: 1vmin;
+    width: 150px;
+    white-space :nowrap;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s all linear;
+    
+}
+
+.options button:hover{
+  background-color: darkcyan;  
+  border:1px solid white;
+}
+ 
+@keyframes shakeComputer{
+    0% {
+        transform: rotate(-30deg);
+    }
+    20%{
+        transform: rotate(30deg);
+    }
+    40%{
+        transform: rotate(-30deg);
+    }
+    60%{
+        transform: rotate(30deg);
+    }
+    80%{
+        transform: rotate(-30deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+
+@keyframes shakePlayer{
+    0% {
+        transform: rotate(30deg);
+    }
+    20%{
+        transform: rotate(-30deg);
+    }
+    40%{
+        transform: rotate(30deg);
+    }
+    60%{
+        transform: rotate(-30deg);
+    }
+    80%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.reset{
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset button{
+    color: #ffffff;
+    background-color: #2b283a;
+    text-align: center;
+    padding: 1em 2em;
+    border : 1px solid white;
+    border-radius: 1vmin;
+    width: 150px;
+    white-space :nowrap;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s all linear;
+
+}
+
+
+.reset button:hover{
+    background-color: darkcyan;  
+    border:1px solid white;
+}

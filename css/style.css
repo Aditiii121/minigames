@@ -1,0 +1,244 @@
+/* Reset & fonts */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #14101f, #302b63, #1a1a2e);
+  color: #f9f9f9;
+  transition: all 0.5s ease;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  border-radius: 0 0 20px 20px;
+}
+
+header h1 {
+  font-size: 32px;
+  color: #00e0d0;
+  font-weight: 700;
+  text-shadow: 0 0 3px rgba(0,224,208,0.6);
+}
+
+header .header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+header .logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00e0d0;
+}
+
+header .header-right a,
+header .header-right button {
+  margin-left: 12px;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(0,224,208,0.18);
+  backdrop-filter: blur(6px);
+  padding: 8px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,224,208,0.3);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+header .header-right a:hover,
+header .header-right button:hover {
+  background: rgba(0,224,208,0.35);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Main */
+main {
+  padding: 50px 20px;
+}
+
+main h2 {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 40px;
+  color: #00e0d0;
+  -webkit-text-stroke: 0.5px #2a2ab6; /* border around each letter */
+  text-shadow: 0 0 2px rgba(0,224,208,0.5);
+}
+
+/* Game Grid */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+@media (max-width: 1024px) {
+  .game-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .game-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Game Card */
+.game-card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(16px);
+  border-radius: 22px;
+  text-align: center;
+  padding: 22px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,224,208,0.2);
+}
+
+.game-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 12px rgba(0,224,208,0.15);
+}
+
+.game-card:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0,224,208,0.25);
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.08);
+}
+
+.game-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #00e0d0;
+  text-shadow: 0 0 1.5px rgba(0,224,208,0.5);
+}
+
+.game-card a {
+  font-size: 16px;
+  display: inline-block;
+  padding: 10px 20px;
+  background: rgba(0,224,208,0.18);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  border: 1px solid rgba(0,224,208,0.3);
+  transition: all 0.3s ease;
+}
+
+.game-card a:hover {
+  background: rgba(0,224,208,0.35);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px 10px;
+  margin-top: 40px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(16px);
+  border-radius: 20px 20px 0 0;
+  color: #00e0d0;
+  font-weight: 500;
+  box-shadow: 0 -4px 20px rgba(0, 224, 208, 0.05);
+}
+
+/* ------------------- LIGHT THEME ------------------- */
+body.light {
+  background: linear-gradient(135deg, #e3f2fd, #f0f7ff);
+  color: #111;
+  transition: all 0.5s ease;
+}
+
+body.light header {
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+body.light header h1 {
+  color: #00bcd4;
+  text-shadow: 0 1px 2px rgba(0,188,212,0.3);
+}
+
+body.light .header-right a,
+body.light .header-right button {
+  background: rgba(0,188,212,0.25);
+  color: #111;
+  border: 1px solid rgba(0,188,212,0.5);
+}
+
+body.light .header-right a:hover,
+body.light .header-right button:hover {
+  background: rgba(0,188,212,0.45);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Game Cards */
+body.light .game-card {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0,188,212,0.25);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+body.light .game-card:hover {
+  background: rgba(255,255,255,0.9);
+  transform: translateY(-4px);
+}
+
+body.light .game-card h3 {
+  color: #00bcd4;
+  text-shadow: 0 0 1px rgba(0,188,212,0.2);
+}
+
+body.light .game-card a {
+  background: rgba(0,188,212,0.25);
+  color: #111;
+  border: 1px solid rgba(0,188,212,0.4);
+}
+
+body.light .game-card a:hover {
+  background: rgba(0,188,212,0.45);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Footer */
+body.light footer {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -4px 15px rgba(0,188,212,0.05);
+  color: #00bcd4;
+  font-weight: 500;
+}

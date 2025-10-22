@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+  <header>
+    <div class="logo">🎮 MiniGameZone</div>
+    <div class="theme-toggle">
+      <button id="toggleTheme">🌙</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2>Create Account</h2>
+    <form id="registerForm">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" min="10" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+      <small id="passwordStrength"></small>
+
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+      <div class="captcha">
+        <label><input type="checkbox" id="captcha" required> I am not a robot 🤖</label>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+
+    <p class="redirect">Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+
+  <script src="../js/register.js"></script>
+</body>
+</html>
